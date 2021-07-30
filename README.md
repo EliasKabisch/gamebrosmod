@@ -1,3 +1,2 @@
-# gamebrosmod
-konnte net alles reinmachen wegen den tollen github limits
-installiert es bei releases
+https://github.com/EliasKabisch/gamebrosmod/releases
+hier installieren
