@@ -1,0 +1,475 @@
+{
+  "net/gamebros/gamebrosmod/ClientProxyGameBrosMod": {
+    "name": "net/gamebros/gamebrosmod/ClientProxyGameBrosMod",
+    "interfaces": [
+      "net/gamebros/gamebrosmod/IProxyGameBrosMod"
+    ]
+  },
+  "net/gamebros/gamebrosmod/ElementsGameBrosMod": {
+    "name": "net/gamebros/gamebrosmod/ElementsGameBrosMod",
+    "interfaces": [
+      "net/minecraftforge/fml/common/IFuelHandler",
+      "net/minecraftforge/fml/common/IWorldGenerator"
+    ],
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerLoggedIn(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLoggedInEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerChangedDimension(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerChangedDimensionEvent;)V"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/ElementsGameBrosMod$GuiHandler": {
+    "name": "net/gamebros/gamebrosmod/ElementsGameBrosMod$GuiHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/IGuiHandler"
+    ]
+  },
+  "net/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement": {
+    "name": "net/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement",
+    "interfaces": [
+      "java/lang/Comparable"
+    ]
+  },
+  "net/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag": {
+    "name": "net/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag",
+    "interfaces": [
+      "java/lang/annotation/Annotation"
+    ]
+  },
+  "net/gamebros/gamebrosmod/GameBrosMod": {
+    "name": "net/gamebros/gamebrosmod/GameBrosMod",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "net/gamebros/gamebrosmod/GameBrosMod",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "modid": {
+            "value": "gamebrosmod"
+          },
+          "version": {
+            "value": "0.0.7 Alpha"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "proxy",
+        "values": {
+          "clientSide": {
+            "value": "net.gamebros.gamebrosmod.ClientProxyGameBrosMod"
+          },
+          "serverSide": {
+            "value": "net.gamebros.gamebrosmod.ServerProxyGameBrosMod"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "gamebrosmod"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "serverLoad(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerBlocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerItems(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerBiomes(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerEntities(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerPotions(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerSounds(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerModels(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/GameBrosModVariables$WorldSavedDataSyncMessage": {
+    "name": "net/gamebros/gamebrosmod/GameBrosModVariables$WorldSavedDataSyncMessage",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "net/gamebros/gamebrosmod/GameBrosModVariables$WorldSavedDataSyncMessageHandler": {
+    "name": "net/gamebros/gamebrosmod/GameBrosModVariables$WorldSavedDataSyncMessageHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "net/gamebros/gamebrosmod/ServerProxyGameBrosMod": {
+    "name": "net/gamebros/gamebrosmod/ServerProxyGameBrosMod",
+    "interfaces": [
+      "net/gamebros/gamebrosmod/IProxyGameBrosMod"
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockEggmansing": {
+    "name": "net/gamebros/gamebrosmod/block/BlockEggmansing",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockEggmansing"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:eggmansing"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockLinuslava": {
+    "name": "net/gamebros/gamebrosmod/block/BlockLinuslava",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockLinuslava"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:linuslava"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "item",
+        "value": {
+          "value": "gamebrosmod:linuslava"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockLinuslava$2": {
+    "name": "net/gamebros/gamebrosmod/block/BlockLinuslava$2",
+    "interfaces": [
+      "net/minecraft/client/renderer/ItemMeshDefinition"
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockMrbeast": {
+    "name": "net/gamebros/gamebrosmod/block/BlockMrbeast",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockMrbeast"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:mrbeast"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockMrbeastmods": {
+    "name": "net/gamebros/gamebrosmod/block/BlockMrbeastmods",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockMrbeastmods"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:mrbeastmods"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockMymedicalicence": {
+    "name": "net/gamebros/gamebrosmod/block/BlockMymedicalicence",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockMymedicalicence"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:mymedicalicence"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockNotrichblock": {
+    "name": "net/gamebros/gamebrosmod/block/BlockNotrichblock",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockNotrichblock"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:notrichblock"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockShitbloxfnitedance": {
+    "name": "net/gamebros/gamebrosmod/block/BlockShitbloxfnitedance",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockShitbloxfnitedance"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:shitbloxfnitedance"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/block/BlockSonicosavesesmarioihopehelikespa": {
+    "name": "net/gamebros/gamebrosmod/block/BlockSonicosavesesmarioihopehelikespa",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/block/BlockSonicosavesesmarioihopehelikespa"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:sonicosavesesmarioihopehelikespa"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/command/CommandDoorstuck": {
+    "name": "net/gamebros/gamebrosmod/command/CommandDoorstuck",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/command/CommandDoorstuck"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/command/CommandDoorstuck$CommandHandler": {
+    "name": "net/gamebros/gamebrosmod/command/CommandDoorstuck$CommandHandler",
+    "interfaces": [
+      "net/minecraft/command/ICommand"
+    ]
+  },
+  "net/gamebros/gamebrosmod/creativetab/TabGm": {
+    "name": "net/gamebros/gamebrosmod/creativetab/TabGm",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/creativetab/TabGm"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/creativetab/TabOpatab": {
+    "name": "net/gamebros/gamebrosmod/creativetab/TabOpatab",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/creativetab/TabOpatab"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/fuel/FuelMrbeastfuel": {
+    "name": "net/gamebros/gamebrosmod/fuel/FuelMrbeastfuel",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/fuel/FuelMrbeastfuel"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/item/ItemPickaxmebeast": {
+    "name": "net/gamebros/gamebrosmod/item/ItemPickaxmebeast",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/item/ItemPickaxmebeast"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:pickaxmebeast"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/item/ItemSperrmull": {
+    "name": "net/gamebros/gamebrosmod/item/ItemSperrmull",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/item/ItemSperrmull"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "gamebrosmod:sperrmull"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/keybind/KeyBindingSpecht": {
+    "name": "net/gamebros/gamebrosmod/keybind/KeyBindingSpecht",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/keybind/KeyBindingSpecht"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/keybind/KeyBindingSpecht$KeyBindingPressedMessage": {
+    "name": "net/gamebros/gamebrosmod/keybind/KeyBindingSpecht$KeyBindingPressedMessage",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "net/gamebros/gamebrosmod/keybind/KeyBindingSpecht$KeyBindingPressedMessageHandler": {
+    "name": "net/gamebros/gamebrosmod/keybind/KeyBindingSpecht$KeyBindingPressedMessageHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "net/gamebros/gamebrosmod/procedure/ProcedureDoorstuckCommandExecuted": {
+    "name": "net/gamebros/gamebrosmod/procedure/ProcedureDoorstuckCommandExecuted",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/procedure/ProcedureDoorstuckCommandExecuted"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/procedure/ProcedureSpechtOnKeyPressed": {
+    "name": "net/gamebros/gamebrosmod/procedure/ProcedureSpechtOnKeyPressed",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/procedure/ProcedureSpechtOnKeyPressed"
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/world/biome/BiomeFuny": {
+    "name": "net/gamebros/gamebrosmod/world/biome/BiomeFuny",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/world/biome/BiomeFuny"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "biome",
+        "value": {
+          "value": "gamebrosmod:funy"
+        }
+      }
+    ]
+  },
+  "net/gamebros/gamebrosmod/world/structure/StructureRarechest": {
+    "name": "net/gamebros/gamebrosmod/world/structure/StructureRarechest",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/gamebros/gamebrosmod/ElementsGameBrosMod$ModElement$Tag;",
+        "target": "net/gamebros/gamebrosmod/world/structure/StructureRarechest"
+      }
+    ]
+  }
+}
